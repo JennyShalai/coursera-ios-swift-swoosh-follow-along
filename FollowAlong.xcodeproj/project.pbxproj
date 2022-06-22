@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA000181286334C300EAC595 /* buttonWelcomScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA000180286334C300EAC595 /* buttonWelcomScreen.swift */; };
 		BADC8B8A286234BA00CCF60D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC8B89286234BA00CCF60D /* AppDelegate.swift */; };
 		BADC8B8C286234BA00CCF60D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC8B8B286234BA00CCF60D /* SceneDelegate.swift */; };
 		BADC8B8E286234BA00CCF60D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADC8B8D286234BA00CCF60D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA000180286334C300EAC595 /* buttonWelcomScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonWelcomScreen.swift; sourceTree = "<group>"; };
 		BADC8B86286234BA00CCF60D /* FollowAlong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FollowAlong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADC8B89286234BA00CCF60D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BADC8B8B286234BA00CCF60D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA00017F2863348B00EAC595 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BA000180286334C300EAC595 /* buttonWelcomScreen.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		BADC8B7D286234BA00CCF60D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		BADC8B88286234BA00CCF60D /* FollowAlong */ = {
 			isa = PBXGroup;
 			children = (
+				BA00017F2863348B00EAC595 /* views */,
 				BADC8B89286234BA00CCF60D /* AppDelegate.swift */,
 				BADC8B8B286234BA00CCF60D /* SceneDelegate.swift */,
 				BADC8B8D286234BA00CCF60D /* ViewController.swift */,
@@ -140,6 +151,7 @@
 			files = (
 				BADC8B8E286234BA00CCF60D /* ViewController.swift in Sources */,
 				BADC8B8A286234BA00CCF60D /* AppDelegate.swift in Sources */,
+				BA000181286334C300EAC595 /* buttonWelcomScreen.swift in Sources */,
 				BADC8B8C286234BA00CCF60D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
