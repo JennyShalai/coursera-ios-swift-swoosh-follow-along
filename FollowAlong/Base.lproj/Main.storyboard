@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FollowAlong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="FollowAlong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                                     <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Nti-OG-4If" kind="show" id="tB0-ce-9y8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -84,16 +87,16 @@
             </objects>
             <point key="canvasLocation" x="-761" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--League View Controller-->
         <scene sceneID="qUH-ax-k1s">
             <objects>
-                <viewController id="Nti-OG-4If" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="skillViewControllwe" id="Nti-OG-4If" customClass="LeagueViewController" customModule="FollowAlong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3lz-Op-q0e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="jRv-aq-9Op">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jhN-AJ-xuh">
                                 <rect key="frame" x="18.666666666666657" y="221.33333333333337" width="337.66666666666674" height="190"/>
@@ -109,6 +112,9 @@
                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onMensTap:" destination="Nti-OG-4If" eventType="touchUpInside" id="26g-YM-t7v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMd-zs-8u4" customClass="buttonWelcomeScreen" customModule="FollowAlong" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="69.999999999999972" width="337.66666666666669" height="50"/>
@@ -121,6 +127,9 @@
                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onWomensTap:" destination="Nti-OG-4If" eventType="touchUpInside" id="BbF-xS-049"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJH-Gc-CZY" customClass="buttonWelcomeScreen" customModule="FollowAlong" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="139.99999999999997" width="337.66666666666669" height="50"/>
@@ -133,6 +142,9 @@
                                             <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onCoedTap:" destination="Nti-OG-4If" eventType="touchUpInside" id="PK9-Fq-mfU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="tintColor" systemColor="systemCyanColor"/>
@@ -153,7 +165,7 @@
                                 <color key="tintColor" systemColor="linkColor"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pv-Ym-Btw" customClass="buttonWelcomeScreen" customModule="FollowAlong" customModuleProvider="target">
-                                <rect key="frame" x="18.666666666666657" y="678" width="337.66666666666674" height="50"/>
+                                <rect key="frame" x="18.666666666666657" y="658" width="337.66666666666674" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.394329551" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cOy-OJ-DRV"/>
@@ -163,6 +175,21 @@
                                     <fontDescription key="titleFontDescription" name="Avenir-Medium" family="Avenir" pointSize="23"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="onNextTap:" destination="Nti-OG-4If" eventType="touchUpInside" id="EnG-ZD-Xtc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-VC-BLP" userLabel="backButton">
+                                <rect key="frame" x="0.0" y="44" width="53" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="9Ly-3h-cSy"/>
+                                    <constraint firstAttribute="width" constant="53" id="Cri-AK-ar4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="backButton"/>
+                                <connections>
+                                    <segue destination="rRO-Gw-8ms" kind="unwind" unwindAction="backToWelcomeScreenWithSegueToWelcome:" id="hPr-IB-LUZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BhC-gV-qBo"/>
@@ -172,10 +199,12 @@
                             <constraint firstItem="3Pv-Ym-Btw" firstAttribute="centerX" secondItem="3lz-Op-q0e" secondAttribute="centerX" id="CJU-Bg-MUz"/>
                             <constraint firstItem="jRv-aq-9Op" firstAttribute="leading" secondItem="BhC-gV-qBo" secondAttribute="leading" id="Ifc-7A-sHD"/>
                             <constraint firstAttribute="bottom" secondItem="jRv-aq-9Op" secondAttribute="bottom" id="PP3-yO-HJd"/>
+                            <constraint firstItem="mk5-VC-BLP" firstAttribute="top" secondItem="BhC-gV-qBo" secondAttribute="top" id="T2Y-Op-0n3"/>
                             <constraint firstItem="KGl-G5-AsL" firstAttribute="centerX" secondItem="3lz-Op-q0e" secondAttribute="centerX" id="TER-L9-hF9"/>
                             <constraint firstItem="KGl-G5-AsL" firstAttribute="width" secondItem="3lz-Op-q0e" secondAttribute="width" multiplier="0.8" id="WYo-Ud-9eU"/>
                             <constraint firstItem="3Pv-Ym-Btw" firstAttribute="width" secondItem="jRv-aq-9Op" secondAttribute="width" multiplier="0.9" id="c5e-Nb-6Cn"/>
                             <constraint firstItem="jRv-aq-9Op" firstAttribute="top" secondItem="3lz-Op-q0e" secondAttribute="top" id="goj-bk-vhn"/>
+                            <constraint firstItem="mk5-VC-BLP" firstAttribute="leading" secondItem="BhC-gV-qBo" secondAttribute="leading" id="kfX-vd-RUe"/>
                             <constraint firstItem="BhC-gV-qBo" firstAttribute="bottom" secondItem="3Pv-Ym-Btw" secondAttribute="bottom" constant="50" id="mGT-G8-Mf2"/>
                             <constraint firstItem="KGl-G5-AsL" firstAttribute="bottom" secondItem="jhN-AJ-xuh" secondAttribute="top" constant="-100" id="p3w-lt-EvW"/>
                             <constraint firstItem="jhN-AJ-xuh" firstAttribute="centerX" secondItem="3lz-Op-q0e" secondAttribute="centerX" id="qSJ-NF-9xC"/>
@@ -183,21 +212,26 @@
                             <constraint firstItem="jRv-aq-9Op" firstAttribute="trailing" secondItem="BhC-gV-qBo" secondAttribute="trailing" id="w06-7i-WxO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="KOQ-gR-2mZ"/>
+                    <connections>
+                        <segue destination="zeQ-PE-kkD" kind="show" identifier="skillViewControllwe" id="rDW-JF-VfN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PW9-zm-csr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="rRO-Gw-8ms" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-28" y="68"/>
+            <point key="canvasLocation" x="-2" y="68"/>
         </scene>
-        <!--View Controller-->
+        <!--Skill View Controller-->
         <scene sceneID="uc5-wi-zNj">
             <objects>
-                <viewController id="zeQ-PE-kkD" sceneMemberID="viewController">
+                <viewController id="zeQ-PE-kkD" customClass="SkillViewController" customModule="FollowAlong" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHY-mc-cYK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="SWl-GD-pLF">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="psx-fI-KZQ">
                                 <rect key="frame" x="18.666666666666657" y="49.999999999999993" width="337.66666666666674" height="77.333333333333314"/>
@@ -259,6 +293,7 @@
                             <constraint firstItem="psx-fI-KZQ" firstAttribute="centerX" secondItem="PHY-mc-cYK" secondAttribute="centerX" id="pR4-cC-kxn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3kd-Ij-EoN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RpL-Jg-3cy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -266,6 +301,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
